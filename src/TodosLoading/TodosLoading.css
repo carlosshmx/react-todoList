@@ -1,6 +1,6 @@
-.TodoItem {
-    background-color: #002fff;
-    color: white;
+.LoadingTodo-container {
+    /* background-color: #002fff;
+    color: white; */
     position: relative;
     display: flex;
     justify-content: center;
@@ -11,7 +11,7 @@
     
   }
   
-  .TodoItem-p {
+  .LoadingTodo-text {
     margin: 24px 0 24px 24px;
     width: calc(100% - 120px);
     font-size: 18px;
@@ -24,18 +24,13 @@
   
   .Icon {
     color: white;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 48px;
     width: 48px;
     font-size: 24px;
-    font-weight: bold;
     /* background-color: #CCC; */
   }
   
-  .Icon-check {
+  .LoadingTodo-completeIcon{
     width: 40px;
     height: 40px;
     background-color: #202020;
@@ -44,26 +39,32 @@
     position: absolute;
     left: 12px;
   }
-  .Icon-check--active {
-    background-image: url('../icons/check-solid.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 30px;
-    background-color: rgb(53, 255, 137);
 
-  }
-  
-  .Icon-delete {
+  .LoadingTodo-deleteIcon {
     position: absolute;
     right: 15px;
-    background-image: url('../icons/trash-alt-regular.svg');
-    background-repeat: no-repeat;
-    background-position: center;
     background-size: 30px;
     background-color: white;
     color: #202020;
     border-radius: 50%;
   }
-  .Icon-delete:hover {
-    background-color: rgb(255, 88, 88);
-  }
+
+.LoadingTodo-container,
+.LoadingTodo-completeIcon,
+.LoadingTodo-deleteIcon{
+    background: linear-gradient(90deg, rgba(250,250,250,1), rgb(80, 80, 80));
+    background-size: 400% 400%;
+    animation: loadingAnimation 3s ease-in-out infinite;
+}
+
+@keyframes loadingAnimation{
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}

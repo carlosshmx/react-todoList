@@ -1,0 +1,82 @@
+.TodoItem {
+    background-color: #002fff;
+    color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+    box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.15);
+    border-radius: 20px;
+    
+  }
+
+
+  
+  .TodoItem-p {
+    margin: 24px 0 24px 24px;
+    width: calc(100% - 120px);
+    font-size: 25px;
+    line-height: 24px;
+    font-weight: 600;
+  }
+  .TodoItem-p--complete {
+    text-decoration: line-through;
+  }
+  
+  .Icon {
+    color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    width: 48px;
+    font-size: 24px;
+    font-weight: bold;
+    /* background-color: #CCC; */
+  }
+  
+  .Icon-check {
+    width: 40px;
+    height: 40px;
+    background-color: #202020;
+    border: solid 2px white;
+    border-radius: 10px;
+    position: absolute;
+    left: 12px;
+  }
+
+  .reactCheck{
+    display: none;
+  }
+  .Icon-check--active {
+    background-color: rgb(53, 255, 137);
+  }
+
+  .Icon-check--active .reactCheck{
+    display: inline-block;
+    color: #202020;
+    font-size: 30px;
+  }
+  
+
+  .Icon-delete {
+    position: absolute;
+    right: 15px;
+    background-size: 30px;
+    background-color: white;
+    color: #202020;
+    border-radius: 50%;
+  }
+
+  .reactTrash{
+    color: #202020;
+    font-size: 35px;
+  }
+  .Icon-delete:hover {
+    background-color: #ff0062;
+  }
+  .Icon-delete:hover .reactTrash{
+    color: white;
+  }
